@@ -1,4 +1,5 @@
-﻿using System;
+﻿using game_sliding_puzzle.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace game_sliding_puzzle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var router = new Router();
+            while(router.loop());
+
+            //Application.Run(new Form1());
         }
     }
 }
